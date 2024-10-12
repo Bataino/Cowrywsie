@@ -1,6 +1,7 @@
 <script setup>
 
 import { Icon } from "@iconify/vue"
+import VLazyImage from "v-lazy-image";
 
 </script>
 
@@ -40,7 +41,7 @@ import { Icon } from "@iconify/vue"
           <div v-for="photogrid in formattedPhotos()" class="col-12 col-sm-6 col-md-4 my-0 py-0">
             <div class="mx-3 mb-5" v-for="img in photogrid">
               <div class="position-relative shadow my-3 mx-auto" style="max-width:100%; width: fit-content;">
-                <img class="w-100 rounded-10" :src="img.urls.regular" />
+                <v-lazy-image class="w-100 rounded-10" :src="img.urls.regular" />
                 <div class="position-absolute p-3 fixed-bottom text-light">
                   <b class="fs-4">{{ `${img.user.name}` }}</b><br>
                   <small>{{ `${img.user.location ?? ''}` }}</small>
