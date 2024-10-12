@@ -1,0 +1,31 @@
+.blg {
+    background-color: lightgray !important;
+}
+
+.bgray {
+    background-color: lightgray;
+}
+
+.placeholder-glow .placeholder {
+    -webkit-animation: placeholder-glow 2s ease-in-out infinite;
+    animation: placeholder-glow 2s ease-in-out infinite;
+}
+
+.placeholder {
+    display: inline-block;
+    min-height: 1em;
+    vertical-align: middle;
+    cursor: wait;
+    background-color: currentColor;
+    opacity: .5;
+}
+
+@keyframes placeholder-glow {
+    50% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
