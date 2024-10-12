@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/vue"
 import VLazyImage from "v-lazy-image";
+import Image from 'primevue/image';
 
 </script>
 
@@ -41,7 +42,7 @@ import VLazyImage from "v-lazy-image";
           <div v-for="photogrid in formattedPhotos()" class="col-12 col-sm-6 col-md-4 my-0 py-0">
             <div class="mx-3 mb-5" v-for="img in photogrid">
               <div class="position-relative shadow my-3 mx-auto" style="max-width:100%; width: fit-content;">
-                <v-lazy-image class="w-100 rounded-10" :src="img.urls.regular" />
+                <Image _class="w-100 rounded-10" imageClass="w-100 rounded-10" :src="img.urls.regular" preview/>
                 <div class="position-absolute p-3 fixed-bottom text-light">
                   <b class="fs-4">{{ `${img.user.name}` }}</b><br>
                   <small>{{ `${img.user.location ?? ''}` }}</small>
@@ -126,11 +127,11 @@ export default {
 
 <style scoped>
 .rounded-10 {
-  border-radius: 10px;
+  border-radius: 10px !important;
 }
 
 .rounded-5 {
-  border-radius: 5px;
+  border-radius: 5px !important;
 }
 
 .logo {
@@ -151,4 +152,6 @@ input:focus {
   border: none;
   box-shadow: none;
 }
+
+
 </style>

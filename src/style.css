@@ -29,3 +29,16 @@
 body {
     font-family: "Poppins", sans-serif;
 }
+
+.p-image-preview{
+    border-radius: 10px !important;
+    display: block !important;
+}
+
+.p-image {
+    border-radius: 10px;
+}
+
+img.w-100.rounded-10 {
+    border-radius: 10px;
+}
